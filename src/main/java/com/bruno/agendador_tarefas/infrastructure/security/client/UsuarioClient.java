@@ -1,4 +1,4 @@
-package com.bruno.agendador_tarefas.infrastructure.client;
+package com.bruno.agendador_tarefas.infrastructure.security.client;
 
 import com.bruno.agendador_tarefas.business.dto.UsuarioDTO;
 import org.springframework.cloud.openfeign.FeignClient;
