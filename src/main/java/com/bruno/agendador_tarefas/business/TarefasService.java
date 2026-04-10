@@ -24,13 +24,15 @@ public class TarefasService {
     private final TarefaUpdateConverter tarefaUpdateConverter;
 
     public TarefasDTO gravarTarefa(String token, TarefasDTO dto) {
-
+        System.out.println("EMAIL QUE CHEGOU: " + dto.getEmailUsuario());
         String email = jwtUtil.extrairEmailToken(token.substring(7));
 
 
         dto.setDataCriacao(LocalDateTime.now());
         dto.setStatusNotificacaoEnum(StatusNotificacaoEnum.PENDENTE);
-        dto.setEmailUsuario(email);
+        if (dto.getEmailUsuario() == null || dto.getEmailUsuario().isBlank()) {
+            dto.setEmailUsuario(email);
+        }
         TarefasEntity entity = tarefasConverter.paraTarefaEntity(dto);
 
         return tarefasConverter.paraTarefaDTO(
@@ -38,7 +40,7 @@ public class TarefasService {
     }
 
     public List<TarefasDTO> buscaTarefasAgendadasPorPeriodo(LocalDateTime dataInicial, LocalDateTime dataFinal) {
-        return tarefasConverter.paraListaTarefasDTO(tarefasRepository.findByDataEventoBetween(dataInicial, dataFinal));
+        return tarefasConverter.paraListaTarefasDTO(tarefasRepository.findByDataEventoBetweenAndStatusNotificacaoEnum(dataInicial, dataFinal,StatusNotificacaoEnum.PENDENTE));
 
     }
 
