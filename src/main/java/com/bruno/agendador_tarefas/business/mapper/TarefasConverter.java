@@ -1,6 +1,6 @@
 package com.bruno.agendador_tarefas.business.mapper;
 
-import com.bruno.agendador_tarefas.business.dto.TarefasDTO;
+import com.bruno.agendador_tarefas.business.dto.TarefasDTORecord;
 import com.bruno.agendador_tarefas.infrastructure.entity.TarefasEntity;
 import org.mapstruct.Mapper;
 
@@ -9,11 +9,11 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface TarefasConverter {
 
-    TarefasEntity paraTarefaEntity(TarefasDTO dto);
+    TarefasEntity paraTarefaEntity(TarefasDTORecord dto);
 
-    TarefasDTO paraTarefaDTO(TarefasEntity entity);
+    TarefasDTORecord paraTarefaDTO(TarefasEntity entity);
 
-    List<TarefasEntity> paraListaTarefasEntity(List<TarefasDTO> dtos);
-    List<TarefasDTO> paraListaTarefasDTO(List<TarefasEntity> entities);
+    List<TarefasEntity> paraListaTarefasEntity(List<TarefasDTORecord> dtos);
+    List<TarefasDTORecord> paraListaTarefasDTORecord(List<TarefasEntity> entities);
 
 }
