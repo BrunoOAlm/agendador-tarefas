@@ -40,18 +40,7 @@ Frontend → BFF → Microsserviços
 - Gradle
 - Docker 
 - Git / GitHub
-
-- ## 📌 Estrutura do projeto
-
-
-controller/
-service/
-client (Feign Clients)
-config/
-dto/
-
-
----
+- 
 
 ## 📌 Objetivo do projeto
 
