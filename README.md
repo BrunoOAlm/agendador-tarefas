@@ -37,7 +37,7 @@ Frontend → BFF → Microsserviços
 - Spring Boot
 - Spring Data JPA
 - PostgreSQL
-- Maven ou Gradle
-- Docker (se aplicável)
+- Gradle
+- Docker 
 - Git / GitHub
 
