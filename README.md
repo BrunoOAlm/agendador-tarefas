@@ -41,3 +41,36 @@ Frontend → BFF → Microsserviços
 - Docker 
 - Git / GitHub
 
+- ## 📌 Estrutura do projeto
+
+
+controller/
+service/
+client (Feign Clients)
+config/
+dto/
+
+
+---
+
+## 📌 Objetivo do projeto
+
+Este projeto foi desenvolvido para praticar arquitetura de sistemas distribuídos, utilizando o padrão BFF para melhorar a organização e comunicação entre frontend e microsserviços.
+
+---
+
+## 📌 Aprendizados
+
+- Arquitetura BFF (Backend For Frontend)
+- Comunicação entre microsserviços
+- Organização de sistemas distribuídos
+- Uso de OpenFeign
+- Separação de responsabilidades
+- Estruturação de backend escalável
+
+
+## 📌 Autor
+
+Desenvolvido por Bruno Almeida  
+Projeto de estudo focado em arquitetura de backend e microsserviços
+
